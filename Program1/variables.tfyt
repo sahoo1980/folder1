@@ -1,0 +1,19 @@
+variable "projectId" {
+  description = "Enter ProjectID"
+}
+variable "projectRegion" {
+  description = "Enter ProjectRegion"
+
+}
+variable "projectZone" {
+  description = "Enter projectZone"
+}
+#variable "NetworkName" {
+# description = "Enter NetworkName"
+#}
+#variable "subnetworkName" {
+# description = "Enter SubNetworkName"
+#}
+#variable "location" {
+# description = "Enter location"
+#}

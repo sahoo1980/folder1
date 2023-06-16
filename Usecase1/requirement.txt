@@ -1,0 +1,11 @@
+You are working on a project to create a multi-tier web application using Terraform. The application consists of a front-end web server, a back-end database server, and a load balancer to distribute traffic between the two servers. The project requires high availability, so you decide to use Terraform to create multiple instances of each server and use a load balancer to distribute traffic between them. GIve me the complete steps to achieve this in Terraform in GCP platform
+
+
+Define
+    1. proviers.tf
+    2. main.tf
+        In main.tf, 
+        add resource blocks for the front-end server, back-end database server, and load balancer.
+        Configure instance templates: for front-end and back-end servers, define instance templates for each.
+        Create an instance group:To manage the instances created from the instance templates, create an instance group for each server.
+        Set up load balancing:Configure the load balancer to distribute traffic between the front-end and back-end servers.

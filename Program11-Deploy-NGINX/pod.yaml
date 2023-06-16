@@ -1,0 +1,16 @@
+apiversion: app/v1
+kind: Pod
+metadata:
+  name: my-nginx-app
+  labels:
+    name: my-nginx-app
+spec:
+  containers:
+  - name: my-nginx-app
+    image: gcr.io/learned-vault-387908/my-image/nginx:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: <Port>

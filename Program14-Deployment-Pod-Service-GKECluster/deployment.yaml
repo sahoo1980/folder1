@@ -1,0 +1,23 @@
+apiserver:  app/v1
+kind: Deployment
+metadata:
+  name: webserver-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webserver
+  template:
+    metadata:
+      labels:
+        app: webserver
+    spec:
+      containers:
+      - name: webserver
+        image: gcr.io/learned-vault-387908/my-image/nginx:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80

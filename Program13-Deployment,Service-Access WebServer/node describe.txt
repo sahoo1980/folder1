@@ -1,0 +1,129 @@
+PS D:\Papa\MyPrograms\My-Terraform\Program13-Deployment,Service-Access WebServer> kubectl describe nodes gke-cloud-trace-demo-default-pool-2c30a201-zl02
+Name:               gke-cloud-trace-demo-default-pool-2c30a201-zl02
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/instance-type=e2-medium
+                    beta.kubernetes.io/os=linux
+                    cloud.google.com/gke-boot-disk=pd-balanced
+                    cloud.google.com/gke-container-runtime=containerd
+                    cloud.google.com/gke-cpu-scaling-level=2
+                    cloud.google.com/gke-logging-variant=DEFAULT
+                    cloud.google.com/gke-max-pods-per-node=110
+                    cloud.google.com/gke-nodepool=default-pool
+                    cloud.google.com/gke-os-distribution=cos
+                    cloud.google.com/gke-provisioning=standard
+                    cloud.google.com/gke-stack-type=IPV4
+                    cloud.google.com/machine-family=e2
+                    cloud.google.com/private-node=false
+                    failure-domain.beta.kubernetes.io/region=us-central1
+                    failure-domain.beta.kubernetes.io/zone=us-central1-a
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=gke-cloud-trace-demo-default-pool-2c30a201-zl02
+                    kubernetes.io/os=linux
+                    node.kubernetes.io/instance-type=e2-medium
+                    topology.gke.io/zone=us-central1-a
+                    topology.kubernetes.io/region=us-central1
+                    topology.kubernetes.io/zone=us-central1-a
+Annotations:        container.googleapis.com/instance_id: 9206668877815191304
+                    csi.volume.kubernetes.io/nodeid:
+                      {"pd.csi.storage.gke.io":"projects/learned-vault-387908/zones/us-central1-a/instances/gke-cloud-trace-demo-default-pool-2c30a201-zl02"}
+                    node.alpha.kubernetes.io/ttl: 0
+                    node.gke.io/last-applied-node-labels:
+                      cloud.google.com/gke-boot-disk=pd-balanced,cloud.google.com/gke-container-runtime=containerd,cloud.google.com/gke-cpu-scaling-level=2,clou...
+                    node.gke.io/last-applied-node-taints:
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Sun, 04 Jun 2023 11:40:54 +0530
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  gke-cloud-trace-demo-default-pool-2c30a201-zl02
+  AcquireTime:     <unset>
+  RenewTime:       Thu, 08 Jun 2023 15:00:53 +0530
+Conditions:
+  Type                          Status  LastHeartbeatTime                 LastTransitionTime                Reason                          
+Message
+  ----                          ------  -----------------                 ------------------                ------                          
+-------
+  FrequentUnregisterNetDevice   False   Thu, 08 Jun 2023 14:56:41 +0530   Sun, 04 Jun 2023 11:40:54 +0530   NoFrequentUnregisterNetDevice   node is functioning properly
+  FrequentKubeletRestart        False   Thu, 08 Jun 2023 14:56:41 +0530   Sun, 04 Jun 2023 11:40:54 +0530   NoFrequentKubeletRestart        kubelet is functioning properly
+  FrequentDockerRestart         False   Thu, 08 Jun 2023 14:56:41 +0530   Sun, 04 Jun 2023 11:40:54 +0530   NoFrequentDockerRestart         
+docker is functioning properly
+  FrequentContainerdRestart     False   Thu, 08 Jun 2023 14:56:41 +0530   Sun, 04 Jun 2023 11:40:54 +0530   NoFrequentContainerdRestart     containerd is functioning properly
+  KernelDeadlock                False   Thu, 08 Jun 2023 14:56:41 +0530   Sun, 04 Jun 2023 11:40:54 +0530   KernelHasNoDeadlock             
+kernel has no deadlock
+  ReadonlyFilesystem            False   Thu, 08 Jun 2023 14:56:41 +0530   Sun, 04 Jun 2023 11:40:54 +0530   FilesystemIsNotReadOnly         
+Filesystem is not read-only
+  CorruptDockerOverlay2         False   Thu, 08 Jun 2023 14:56:41 +0530   Sun, 04 Jun 2023 11:40:54 +0530   NoCorruptDockerOverlay2         
+docker overlay2 is functioning properly
+  NetworkUnavailable            False   Wed, 07 Jun 2023 19:50:35 +0530   Wed, 07 Jun 2023 19:50:35 +0530   RouteCreated                    
+NodeController create implicit route
+  MemoryPressure                False   Thu, 08 Jun 2023 14:58:53 +0530   Sun, 04 Jun 2023 11:39:48 +0530   KubeletHasSufficientMemory      kubelet has sufficient memory available
+  DiskPressure                  False   Thu, 08 Jun 2023 14:58:53 +0530   Sun, 04 Jun 2023 11:39:48 +0530   KubeletHasNoDiskPressure        kubelet has no disk pressure
+  PIDPressure                   False   Thu, 08 Jun 2023 14:58:53 +0530   Sun, 04 Jun 2023 11:39:48 +0530   KubeletHasSufficientPID         
+kubelet has sufficient PID available
+  Ready                         True    Thu, 08 Jun 2023 14:58:53 +0530   Sun, 04 Jun 2023 11:40:57 +0530   KubeletReady                    
+kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  10.128.0.3
+  ExternalIP:  34.29.139.203
+  Hostname:    gke-cloud-trace-demo-default-pool-2c30a201-zl02
+Capacity:
+  cpu:                2
+  ephemeral-storage:  98831908Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             4022968Ki
+  pods:               110
+Allocatable:
+  cpu:                940m
+  ephemeral-storage:  47060071478
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             2877112Ki
+  pods:               110
+System Info:
+  Machine ID:                 7bd36e2dad15f5ae3cf949b4ebe1fe77
+  System UUID:                7bd36e2d-ad15-f5ae-3cf9-49b4ebe1fe77
+  Boot ID:                    51e86232-ad8c-43b2-a4a9-e06716b6c336
+  Kernel Version:             5.15.89+
+  OS Image:                   Container-Optimized OS from Google
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://1.6.18
+  Kubelet Version:            v1.25.8-gke.500
+  Kube-Proxy Version:         v1.25.8-gke.500
+PodCIDR:                      10.4.0.0/24
+PodCIDRs:                     10.4.0.0/24
+ProviderID:                   gce://learned-vault-387908/us-central1-a/gke-cloud-trace-demo-default-pool-2c30a201-zl02
+Non-terminated Pods:          (18 in total)
+  Namespace                   Name                                                          CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                                          ------------  ----------  ---------------  -------------  ---
+  default                     cloud-trace-demo-a-7cf468645c-4lmbz                           0 (0%)        0 (0%)      0 (0%)           0 (0%)         125m
+  default                     cloud-trace-demo-b-79599cc79d-s8j4j                           0 (0%)        0 (0%)      0 (0%)           0 (0%)         125m
+  default                     cloud-trace-demo-c-7b8fc87776-hr87b                           0 (0%)        0 (0%)      0 (0%)           0 (0%)         125m
+  gmp-system                  alertmanager-0                                                16m (1%)      0 (0%)      48M (1%)         160M (5%)      19h
+  gmp-system                  collector-4h7nh                                               24m (2%)      0 (0%)      144M (4%)        3032M (102%)   19h
+  gmp-system                  gmp-operator-7c6d7fdb44-8vqv6                                 8m (0%)       0 (0%)      32M (1%)         2G (67%)       125m
+  gmp-system                  rule-evaluator-78d5646997-rlk52                               16m (1%)      0 (0%)      48M (1%)         1032M (35%)    125m
+  kube-system                 event-exporter-gke-755c4b4d97-zx4bv                           0 (0%)        0 (0%)      0 (0%)           0 (0%)         4d3h
+  kube-system                 fluentbit-gke-lrdkh                                           100m (10%)    0 (0%)      200Mi (7%)       500Mi (17%)    28h
+  kube-system                 gke-metrics-agent-7w567                                       14m (1%)      0 (0%)      160Mi (5%)       160Mi (5%)     19h
+  kube-system                 konnectivity-agent-54bc6f8ccb-4pjpb                           10m (1%)      0 (0%)      30Mi (1%)        125Mi (4%)     125m
+  kube-system                 konnectivity-agent-autoscaler-7dc78c8c9-jv42z                 10m (1%)      0 (0%)      10M (0%)         0 (0%)         4d3h
+  kube-system                 kube-dns-5b5dfcd97b-x4qrd                                     260m (27%)    0 (0%)      110Mi (3%)       210Mi (7%)     4d3h
+  kube-system                 kube-dns-autoscaler-5f56f8997c-6969h                          20m (2%)      0 (0%)      10Mi (0%)        0 (0%)         125m
+  kube-system                 kube-proxy-gke-cloud-trace-demo-default-pool-2c30a201-zl02    100m (10%)    0 (0%)      0 (0%)           0 (0%)         4d3h
+  kube-system                 l7-default-backend-8cdcff48c-mrfp6                            10m (1%)      0 (0%)      20Mi (0%)        0 (0%)         4d3h
+  kube-system                 metrics-server-v0.5.2-67864775dc-lpv9c                        48m (5%)      43m (4%)    105Mi (3%)       355Mi (12%)    125m
+  kube-system                 pdcsi-node-krvf5                                              10m (1%)      0 (0%)      20Mi (0%)        100Mi (3%)     4d3h
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests         Limits
+  --------           --------         ------
+  cpu                646m (68%)       43m (4%)
+  memory             968817280 (32%)  7744435200 (262%)
+  ephemeral-storage  0 (0%)           0 (0%)
+  hugepages-1Gi      0 (0%)           0 (0%)
+  hugepages-2Mi      0 (0%)           0 (0%)
+Events:              <none>
+PS D:\Papa\MyPrograms\My-Terraform\Program13-Deployment,Service-Access WebServer> 

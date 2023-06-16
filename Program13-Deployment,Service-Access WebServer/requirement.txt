@@ -1,0 +1,14 @@
+You have one existing GKE cluster. 
+Create Service and Deployment for web Server and access the web server over browser via load balancer. 
+how we can achieve this using Infrastructure as Code, e.g Terraform?
+
+1. Create one Deployment yaml file.
+2. Create one Service yaml file.
+3. Create one Terraform provider file.
+4. Create one Terraform main file.
+
+
+Note - could not completed due the the below error
+│ Error: googleapi: Error 403: Insufficient regional quota to satisfy request: resource "SSD_TOTAL_GB": request requires '900.0' and is short '700.0'. project has a quota of '500.0' with '200.0' available. View and manage quotas at https://console.cloud.google.com/iam-admin/quotas?usage=USED&project=learned-vault-387908., forbidden
+
+

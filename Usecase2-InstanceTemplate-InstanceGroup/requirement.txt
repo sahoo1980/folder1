@@ -1,0 +1,2 @@
+terraform script for instance template and instance group to manage the instance template 
+

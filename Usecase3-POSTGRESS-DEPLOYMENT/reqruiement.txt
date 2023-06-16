@@ -1,0 +1,9 @@
+Using Terraform,
+create one POSTGRESS instance , 
+create nginx deploying using the image available in GCR
+and how how deployment using the POSTGRESS instance
+
+providers.Tf
+main.Tf
+    define POSTGRESS module
+    

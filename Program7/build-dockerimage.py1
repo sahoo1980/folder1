@@ -1,0 +1,17 @@
+import subprocess
+import time
+
+subprocess.run(["docker", "build", "-t", "my-image:latest", "."], check=True, cwd="D:\\Papa\\MyPrograms\\My-Terraform\\Program7")
+
+time.sleep (180)
+
+subprocess.run(["gcloud", "auth", "configure-docker"], check=True)
+subprocess.run(["gcloud", "tag", "my-image:latest", "gcr.io/learned-vault-387908/my-folder/my-image:latest"], check=True)
+subprocess.run(["gcloud", "push", "gcr.io/learned-vault-387908/my-folder/my-image:latest"], check=True)
+
+time.sleep(300)
+
+subprocess.run(["terraform", "fmt"], check=True)
+subprocess.run(["terraform", "init"], check=True)
+subprocess.run(["terraform", "plan"], check=True)
+subprocess.run(["terraform", "apply"], check=True)

@@ -1,0 +1,162 @@
+PS D:\Papa\MyPrograms\My-Terraform\Program12-SameProviderwithMultipleConfigurations> terraform apply
+Acquiring state lock. This may take a few moments...
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # google_compute_instance.provider-vm will be created
+  + resource "google_compute_instance" "provider-vm" {
+      + can_ip_forward       = false
+      + cpu_platform         = (known after apply)
+      + deletion_protection  = false
+      + guest_accelerator    = (known after apply)
+      + id                   = (known after apply)
+      + instance_id          = (known after apply)
+      + label_fingerprint    = (known after apply)
+      + machine_type         = "e1-standard-1"
+      + metadata_fingerprint = (known after apply)
+      + min_cpu_platform     = (known after apply)
+      + name                 = "provider-vm"
+      + project              = (known after apply)
+      + self_link            = (known after apply)
+      + tags_fingerprint     = (known after apply)
+      + zone                 = "us-central1-a"
+
+      + boot_disk {
+          + auto_delete                = true
+          + device_name                = (known after apply)
+          + disk_encryption_key_sha256 = (known after apply)
+          + kms_key_self_link          = (known after apply)
+          + mode                       = "READ_WRITE"
+          + source                     = (known after apply)
+
+          + initialize_params {
+              + image  = "gcr.io/learned-vault-387908/my-image/nginx:latest"
+              + labels = (known after apply)
+              + size   = (known after apply)
+              + type   = (known after apply)
+            }
+        }
+
+      + network_interface {
+          + name               = (known after apply)
+          + network            = "default"
+          + network_ip         = (known after apply)
+          + subnetwork         = (known after apply)
+          + subnetwork_project = (known after apply)
+        }
+    }
+
+  # google_compute_instance.provider-vm1 will be created
+  + resource "google_compute_instance" "provider-vm1" {
+      + can_ip_forward       = false
+      + cpu_platform         = (known after apply)
+      + deletion_protection  = false
+      + guest_accelerator    = (known after apply)
+      + id                   = (known after apply)
+      + instance_id          = (known after apply)
+      + label_fingerprint    = (known after apply)
+      + machine_type         = "e1-standard-1"
+      + metadata_fingerprint = (known after apply)
+      + min_cpu_platform     = (known after apply)
+      + name                 = "provider-vm1"
+      + project              = (known after apply)
+      + self_link            = (known after apply)
+      + tags_fingerprint     = (known after apply)
+      + zone                 = "us-central1-a"
+
+      + boot_disk {
+          + auto_delete                = true
+          + device_name                = (known after apply)
+          + disk_encryption_key_sha256 = (known after apply)
+          + kms_key_self_link          = (known after apply)
+          + mode                       = "READ_WRITE"
+          + source                     = (known after apply)
+
+          + initialize_params {
+              + image  = "debian-cloud/debian9"
+              + labels = (known after apply)
+              + size   = (known after apply)
+              + type   = (known after apply)
+            }
+        }
+
+      + network_interface {
+          + name               = (known after apply)
+          + network            = "default"
+          + network_ip         = (known after apply)
+          + subnetwork         = (known after apply)
+          + subnetwork_project = (known after apply)
+        }
+    }
+
+  # google_compute_instance.provider-vm2 will be created
+  + resource "google_compute_instance" "provider-vm2" {
+      + can_ip_forward       = false
+      + cpu_platform         = (known after apply)
+      + deletion_protection  = false
+      + guest_accelerator    = (known after apply)
+      + id                   = (known after apply)
+      + instance_id          = (known after apply)
+      + label_fingerprint    = (known after apply)
+      + machine_type         = "e1-standard-1"
+      + metadata_fingerprint = (known after apply)
+      + min_cpu_platform     = (known after apply)
+      + name                 = "provider-vm2"
+      + project              = (known after apply)
+      + self_link            = (known after apply)
+      + tags_fingerprint     = (known after apply)
+      + zone                 = "us-central1-a"
+
+      + boot_disk {
+          + auto_delete                = true
+          + device_name                = (known after apply)
+          + disk_encryption_key_sha256 = (known after apply)
+          + kms_key_self_link          = (known after apply)
+          + mode                       = "READ_WRITE"
+          + source                     = (known after apply)
+
+          + initialize_params {
+              + image  = "debian-cloud/debian9"
+              + labels = (known after apply)
+              + size   = (known after apply)
+              + type   = (known after apply)
+            }
+        }
+
+      + network_interface {
+          + name               = (known after apply)
+          + network            = "default"
+          + network_ip         = (known after apply)
+          + subnetwork         = (known after apply)
+          + subnetwork_project = (known after apply)
+        }
+    }
+
+Plan: 3 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+google_compute_instance.provider-vm1: Creating...
+google_compute_instance.provider-vm2: Creating...
+google_compute_instance.provider-vm: Creating...
+╷
+│ Error: Error resolving image name 'gcr.io/learned-vault-387908/my-image/nginx:latest': Could not find image or family gcr.io/learned-vault-387908/my-image/nginx:latest
+│
+│   with google_compute_instance.provider-vm,
+│   on mymain.tf line 25, in resource "google_compute_instance" "provider-vm":
+│   25: resource "google_compute_instance" "provider-vm" {
+│
+│   with google_compute_instance.provider-vm2,
+│   on mymain.tf line 56, in resource "google_compute_instance" "provider-vm2":
+│   56: resource "google_compute_instance" "provider-vm2" {
+│
+╵
+Releasing state lock. This may take a few moments...
+PS D:\Papa\MyPrograms\My-Terraform\Program12-SameProviderwithMultipleConfigurations>

@@ -1,0 +1,12 @@
+apiserver:  app/v1
+kind: Service
+metadata:
+  name: webserver-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: webserver
+  ports:
+  - protocol: TCP 
+    port: 80
+    targetPort: 80

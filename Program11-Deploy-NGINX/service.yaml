@@ -1,0 +1,10 @@
+apiversion: app/v1
+kind: Service
+metadata:
+  name: my-nginx-app
+spec:
+  selector:
+    app: my-nginx-app
+  ports:
+  - port: 80
+    targetPort: 80
